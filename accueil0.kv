@@ -1,0 +1,113 @@
+<Accueil>:
+
+    BoxLayout:
+        orientation : 'vertical'
+
+        MDToolbar:
+            title : 'DEP de constantine'
+            left_action_items: [["menu", lambda x: nav_drawer. set_state()]]
+            right_action_items: [["dots-vertical", lambda x: app.callback_1()],["clock", lambda x: app.clock_def()]]
+            elevation : 8
+        Image:
+            source: 'industrie_chantiers.jpg'
+            size: "350dp", "350dp"
+            size_hint: None,None
+            pos_hint:{"center_x":.5, "center_y":.2}
+
+        MDLabel:
+            text: 'Bienvenue \nA \nDEP de constantine'
+            halign: 'center'
+
+        MDBottomAppBar:
+            MDToolbar:
+                left_action_items: [["coffee",lambda x: idcoffee.set_state()]]# app.coffee_def()]]
+                type: 'bottom'
+                title : 'Aide '
+                icon:'logout'
+                #icon_color: 0, 1, 0, 1
+                mode: 'end'
+                on_action_button : app.logout_def()
+
+    MDNavigationLayout:
+
+        MDNavigationDrawer:
+            id: nav_drawer
+
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: '8dp'
+                padding: '8dp'
+
+                Image:
+                    size_hint: None, None
+                    size: "100dp", "100dp"
+                    source: 'industrie_chantiers.jpg'
+
+                MDLabel:
+                    text: '    DEP de constantine'
+                    font_style: 'Subtitle2'
+                    size_hint_y : None
+                    height : self.texture_size[1]
+
+                MDLabel:
+                    text: '    depdeconstantine@gmail.com'
+                    font_style: 'Caption'
+                    size_hint_y : None
+                    height : self.texture_size[1]
+
+                ScrollView:
+                    MDList:
+                        MDList:
+
+                        OneLineIconListItem
+                            #on_release: idProfile.set_state()
+                            on_release: app.change_fenetre(nom_fenetre="profile")
+                            text: 'DEP'
+                            IconLeftWidget :
+                                icon: 'home'
+
+                        OneLineIconListItem
+                            #on_release: idProfile.set_state()
+                            on_release: app.change_fenetre(nom_fenetre="personnel")
+                            text: 'Personnel'
+                            IconLeftWidget :
+                                #icon: 'face-profile-woman'
+                                icon: 'account-multiple'
+                        OneLineIconListItem:
+                            on_release:
+                            text: 'Paie'
+                            IconLeftWidget :
+                                icon: 'folder'
+
+                        OneLineIconListItem:
+                            on_release:
+                            text: 'Prime de rendement'
+                            IconLeftWidget :
+                                icon: 'star'
+
+                        OneLineIconListItem:
+                            on_release:
+                            text: 'Rappels'
+                            IconLeftWidget :
+                                icon: 'history'
+
+                        OneLineIconListItem:
+                            on_release: print("Upload")
+                            text: 'Facturation'
+                            IconLeftWidget :
+                                icon: 'upload'
+
+
+                        OneLineIconListItem:
+                            on_release: app.change_fenetre(nom_fenetre="parametre")
+                            text: 'Frais de missions'
+                            IconLeftWidget :
+                                icon: 'car-estate'
+
+                        OneLineIconListItem:
+                            on_release: app.change_fenetre(nom_fenetre="list")
+                            text: 'Parametres'
+                            IconLeftWidget :
+                                icon: 'cogs'
+
+

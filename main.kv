@@ -1,0 +1,31 @@
+#: include accueil.kv
+#: include profile.kv
+#: include personnel.kv
+#: include parametre.kv
+
+
+GridLayout:
+    cols:1
+    orientation:'lr-tb'
+
+    ScreenManager:
+        id:screen_manager
+
+        Accueil:
+            id:accueil
+            name:"accueil"
+
+        Profile:
+            id:profile
+            name:"profile"
+
+        Personnel:
+            id:personnel
+            name:"personnel"
+
+        Parametre:
+            id:parametre
+            name:"parametre"
+
+
+

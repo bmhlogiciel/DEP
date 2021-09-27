@@ -1,0 +1,23 @@
+<Personnel>:
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '10dp'
+        padding: '15dp'
+
+        MDLabel:
+            text: 'Liste Personnel de DEP'
+            font_style: 'Subtitle2'
+
+            height : self.texture_size[1]
+            halign:"center"
+
+        ScrollView:
+            for i in range(10):
+                image = ImageLeftWidget(source='CupCoffee.jpg')
+                items = ThreeLineAvatarIconListItem(text='Nom ' + str(i),secondary_text='Prénom',
+                                                tertiary_text='Grade')
+                items.add_widget(image)
+
+                list_view.add_widget(items)
+            screen.add_widget(scroll)

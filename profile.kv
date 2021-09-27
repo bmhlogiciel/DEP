@@ -1,0 +1,52 @@
+<Profile>:
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '8dp'
+        padding: '8dp'
+
+        Image:
+            source: 'industrie_chantiers.jpg'
+            size: "250dp", "250dp"
+            size_hint: None, None
+            pos_hint:{"center_x":.5, "center_y":.2}
+
+        MDLabel:
+            text: 'DEP de constantine'
+            font_size :'100dp'
+            font_style: 'Subtitle2'
+            size_hint_y : None
+            height : self.texture_size[1]
+            halign:"center"
+
+        MDLabel:
+            text: 'Direction des Equipements Publics \n de la wilaya de constantine'
+            font_style: 'Subtitle2'
+            size_hint_y : None
+            height : self.texture_size[1]
+            halign:"center"
+
+        MDLabel:
+            text: 'depdeconstantine@gmail.com'
+            font_style: 'Caption'
+            size_hint_y : None
+            height : self.texture_size[1]
+            halign:"center"
+
+    #FloatLayout:
+        MDLabel:
+            text:"ici Profile"
+            halign:"center"
+
+        MDRoundFlatButton:
+            text:"aller accueil"
+            pos_hint:{"center_x":.5, "center_y":.2}
+            on_release:
+                app.change_fenetre(nom_fenetre="accueil")
+
+
+
+
+
+
+
