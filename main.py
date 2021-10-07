@@ -9,6 +9,8 @@ from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivymd.theming import ThemeManager
 from kivy.uix.screenmanager import Screen,NoTransition,CardTransition
+from kivy.uix.boxlayout import BoxLayout
+
 
 # Window.size = (300,500)
 
@@ -31,7 +33,7 @@ class MainApp(MDApp):
         self.theme_cls = ThemeManager()
         self.theme_cls.primary_palette = "Green"
         super().__init__(**kwargs)
-
+    our_list = ["Mohamd","Hamza","said","hichem"]
     @property
     def build(self):
         return Builder.load_file("main.kv")

@@ -1,23 +1,26 @@
 <Personnel>:
-
-    BoxLayout:
-        orientation: 'vertical'
-        spacing: '10dp'
-        padding: '15dp'
-
+               
+    FloatLayout:
         MDLabel:
-            text: 'Liste Personnel de DEP'
-            font_style: 'Subtitle2'
-
-            height : self.texture_size[1]
+            id: our_label
+            text:"ici personnel"
             halign:"center"
+        
+        
+        
+        MDRoundFlatButton:
+            text:"back to accueil"
+            pos_hint:{"center_x":.5, "center_y":.2}
+            on_release:
+                app.change_fenetre(nom_fenetre="accueil")
+        
+        MDRoundFlatButton:
+            text:"Liste"
+            pos_hint:{"center_x":.5, "center_y":.4}
+            on_release:
+                for i in range(10):\
+                our_label.text = our_label.text+"\n"+str(i)
 
-        ScrollView:
-            for i in range(10):
-                image = ImageLeftWidget(source='CupCoffee.jpg')
-                items = ThreeLineAvatarIconListItem(text='Nom ' + str(i),secondary_text='Prénom',
-                                                tertiary_text='Grade')
-                items.add_widget(image)
-
-                list_view.add_widget(items)
-            screen.add_widget(scroll)
+   
+             
+           

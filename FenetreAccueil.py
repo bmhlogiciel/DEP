@@ -16,7 +16,7 @@ from kivymd.uix.button import MDFlatButton
 
 from screen_code import screen_helper
 
-Window.size = (300, 500)
+Window.size = (700, 600)
 
 
 class DemoApp(MDApp):

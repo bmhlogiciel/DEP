@@ -4,7 +4,7 @@
         orientation : 'vertical'
 
         MDToolbar:
-            title : 'DEP de constantine created by BMH Logiciel'
+            title : 'DEP de constantine created by BMH code'
             left_action_items: [["menu", lambda x: nav_drawer. set_state()]]
             right_action_items: [["dots-vertical", lambda x: app.callback_1()],["clock", lambda x: app.clock_def()]]
             elevation : 8
@@ -35,57 +35,63 @@
 
             ScrollView:
                 MDList:
-                    MDList:
+                 
 
                     OneLineIconListItem
-                        #on_release: idProfile.set_state()
                         on_release: app.change_fenetre(nom_fenetre="profile")
+                        #on_release: idProfile.set_state()
                         text: 'DEP'
                         IconLeftWidget :
                             icon: 'home'
+                     
 
                     OneLineIconListItem
+
                         #on_release: idProfile.set_state()
                         on_release: app.change_fenetre(nom_fenetre="personnel")
                         text: 'Personnel'
                         IconLeftWidget :
-                            #icon: 'face-profile-woman'
                             icon: 'account-multiple'
+                      
+
                     OneLineIconListItem:
-                        on_release:
+                        on_release : app.change_fenetre(nom_fenetre="profile")
                         text: 'Paie'
                         IconLeftWidget :
                             icon: 'folder'
+                       
 
                     OneLineIconListItem:
                         on_release:
                         text: 'Prime de rendement'
                         IconLeftWidget :
                             icon: 'star'
+                       
 
                     OneLineIconListItem:
                         on_release:
                         text: 'Rappels'
                         IconLeftWidget :
                             icon: 'history'
+                       
 
                     OneLineIconListItem:
                         on_release: print("Upload")
                         text: 'Facturation'
                         IconLeftWidget :
                             icon: 'upload'
-
-
+                      
                     OneLineIconListItem:
-                        on_release: app.change_fenetre(nom_fenetre="parametre")
+                        on_release: app.change_fenetre(nom_fenetre="frais")
                         text: 'Frais de missions'
                         IconLeftWidget :
                             icon: 'car-estate'
+                       
 
                     OneLineIconListItem:
-                        on_release: app.change_fenetre(nom_fenetre="list")
+                        on_release: app.change_fenetre(nom_fenetre="parametre")
                         text: 'Parametres'
                         IconLeftWidget :
                             icon: 'cogs'
-
+                     
 

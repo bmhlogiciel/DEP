@@ -1,6 +1,7 @@
 <Parametre>:
     FloatLayout:
         MDLabel:
+            id: our_label
             text:"ici Parametre"
             halign:"center"
 
@@ -9,3 +10,10 @@
             pos_hint:{"center_x":.5, "center_y":.2}
             on_release:
                 app.change_fenetre(nom_fenetre="accueil")
+        
+        MDRoundFlatButton:
+            text:"Liste"
+            pos_hint:{"center_x":.5, "center_y":.4}
+            on_release:
+                for i in range(5): our_label.text= our_label.text+ "\nLooped!"
+              
