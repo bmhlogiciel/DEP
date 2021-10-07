@@ -20,7 +20,13 @@
             on_release:
                 for i in range(10):\
                 our_label.text = our_label.text+"\n"+str(i)
-
+                
+                 def on_start(self):
+                    icons = list(md_icons.keys())
+                    for i in range(30):
+                        self.root.ids.scroll.add_widget(
+                            ListItemWithCheckbox(text=f"Item {i}", icon=icons[i])
+                        )
    
              
            
