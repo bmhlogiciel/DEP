@@ -1,0 +1,27 @@
+<Personnel>:
+               
+    FloatLayout:
+        MDLabel:
+            id: our_label
+            text:"ici personnel"
+            halign:"center"
+        
+        
+        
+        MDRoundFlatButton:
+            text:"back to accueil"
+            pos_hint:{"center_x":.5, "center_y":.2}
+            on_release:
+                app.change_fenetre(nom_fenetre="accueil")
+        
+        MDRoundFlatButton:
+            text:"Liste"
+            pos_hint:{"center_x":.5, "center_y":.4}
+            on_release:
+                for i in range(10):\
+                our_label.text = our_label.text+"\n"+str(i)
+                
+    
+   
+             
+           

@@ -10,6 +10,7 @@ from kivy.lang import Builder
 from kivymd.theming import ThemeManager
 from kivy.uix.screenmanager import Screen,NoTransition,CardTransition
 from kivy.uix.boxlayout import BoxLayout
+from kivymd.uix.list import OneLineListItem
 
 
 # Window.size = (300,500)
@@ -54,9 +55,7 @@ class MainApp(MDApp):
 
         screen_manager.transition = CardTransition(direction=direction, mode=mode,duration=duration)
         screen_manager.current = nom_fenetre
+    
 
-
-
-
-
+  
 MainApp().run()
