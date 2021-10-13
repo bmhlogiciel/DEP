@@ -31,7 +31,7 @@ class DemoApp(MDApp):
 
     @property
     def build(self):
-        self.title = 'BMH code'
+        self.title = 'Hi its BMHcode'
         self.theme_cls.primary_palette = 'Red'
         screen = Builder.load_string(screen_helper)
         return screen
